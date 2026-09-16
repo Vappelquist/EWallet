@@ -11,15 +11,18 @@ const dispatch = useDispatch();
 const navigate = useNavigate();
 
 const activeCard = items.find ((c) => c.id === activeCardId);
+const otherCards = items.filter ((c) => c.id !== activeCardId)
 
+console.log('items:', items);
+console.log('otherCards:', otherCards);
     return(
         <div>
-            <top title ="E-Wallet"/>
+            <Header title ="E-Wallet"/>
             {activeCard && <Card {...activeCard} label="Active card" />}
 
         <CardStack
-        cards = {items}
-        onselect ={(id) => dispatch(cardSetActive(id))}
+        cards = {otherCards}
+        onSelect ={(id) => dispatch(cardSetActive(id))}
         />
 
         <button onClick={() => navigate('/addcard')}> 

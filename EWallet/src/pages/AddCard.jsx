@@ -24,9 +24,9 @@ function AddCard() {
 
   return(
     <div>
-        <Header Title="Add a new bank card"/>
-            <Card{...formData} label="New card" placeholder />
-            <cardForm
+        <Header title="Add a new bank card"/>
+    <Card {...formData} label="New card" placeholder />            
+    <CardForm
             formData ={formData}
             onChange={setFormData}
             onSubmit={handleSubmit}

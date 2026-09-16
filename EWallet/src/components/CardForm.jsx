@@ -5,6 +5,12 @@ function CardForm({ formData, onChange, onSubmit}){
 
     return (
         <form onSubmit={(e) => {e.preventDefault(); onSubmit();}}>
+            <select name="vendor" onChange={handleChange('vendor')}>
+                <option value="bitcoin">BitCoin</option>
+                <option value="blockchain">BlockChain</option>
+                <option value="evil">EvilBank</option>
+                <option value="ninja">NinjaBank</option>
+            </select>
             <label>Card number</label>
             <input value={formData.number} onChange={handleChange('number')} />
             
