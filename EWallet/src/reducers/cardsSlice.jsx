@@ -9,7 +9,8 @@ const cardSlice = createSlice({
                 number: '1234 1234 1234 1234',
                 holder: 'TestHolder',
                 expiry:'12/27',
-                vendor: 'TestBank'
+                vendor: 'TestBank',
+                ccv: '675'
             },
         ],
         activeCardId: 1,

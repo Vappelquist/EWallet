@@ -11,6 +11,7 @@ function AddCard() {
     holder: '',
     expiry: '',
     vendor: '',
+    ccv: '',
   });
 
 
@@ -23,9 +24,9 @@ function AddCard() {
   };
 
   return(
-    <div>
+    <div className='add-card-menu'>
         <Header title="Add a new bank card"/>
-    <Card {...formData} label="New card" placeholder />            
+    <Card {...formData}  placeholder />            
     <CardForm
             formData ={formData}
             onChange={setFormData}

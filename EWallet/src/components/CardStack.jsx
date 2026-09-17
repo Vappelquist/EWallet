@@ -8,7 +8,7 @@ function CardStack({ cards = [], onSelect}){
         
         <div className='card-stack'>
             {cards.map((card) => (
-                <div key ={card.id} onClick={() => onSelect(card.id)}>
+                <div key ={card.id} className="card-wrapper" onClick={() => onSelect(card.id)}>
                     <Card {...card}/>
                     </div>
             ))}

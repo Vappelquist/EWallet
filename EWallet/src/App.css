@@ -1,0 +1,116 @@
+.home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    height: 220px;
+  width: 100%;
+  max-width: 380px;
+  /* aspect-ratio: 1.586 / 1;    */
+  border-radius: 16px;
+  padding: 24px;
+  overflow: hidden;
+}
+.card-footer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    justify-content: space-between;
+}
+.info-text{
+    font-size: 11px;
+    justify-self: left;
+}
+span.card-info{
+    font-size: 16px;
+    font-weight: bold;
+}
+.cardnumbers{
+margin-right: 1em;
+
+}
+.cardname{
+    margin-left: 1em;
+}
+
+.add-card-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-number{
+    margin-top: 0.7em;
+    font-size: 26px;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+.imgs{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.img.card-vendor-logo{
+    width: 28px;
+  height: 28px;
+  margin-top: 50px;
+  margin-right: 60px;
+}
+
+.card-stack{
+    display:flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.card-stack .card-wrapper:hover{
+    margin-bottom: 100px;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+.card-stack .card-wrapper{
+    position:relative;
+    margin-top:-180px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.card-stack .card-wrapper:first-child{
+    margin-top: 0;
+}
+
+.add-button{
+    
+    width: 100%;
+    max-width: 380px;      
+    padding: 16px 24px;    
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    background: white;
+    color: #000;
+    cursor: pointer;
+    margin-top: 1.5em;
+}
+
+.add-card-button:hover {
+    background: #f5f5f5;
+}

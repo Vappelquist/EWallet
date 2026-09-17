@@ -20,20 +20,27 @@ const vendorColors = {
 }
 
 
-function Card({ number, holder, expiry, vendor, label, placeholder}){
-    const background = vendorColors[vendor] || '#333';
+function Card({ number, holder, expiry, vendor, label, ccv}){
+    const background = vendorColors[vendor.toLowerCase()] || '#333';
     return(
     // <div className={`card ${vendor} ${placeholder ? 'card--empty' : ''}`}>
     <div className="card" style={{background}}>
         <div className="imgs">
-            <img src={lightChip} alt="chip" />
-            <img src={logos[vendor]} alt="VendorLogo" />
+            <img src={lightChip} alt="chip" className="card-chip"/>
+            <img src={logos[vendor.toLowerCase()]} alt="VendorLogo" className="card-vendor-logo"/>
             </div>
             <span className="card-label">{label}</span>
-            <p>{number || 'XXXX XXXX XXXX XXXX'}</p>
+            <p className='card-number'>{number || 'XXXX XXXX XXXX XXXX'}</p>
             <div className="card-footer">
-                <span>{holder || 'Firstname Lastname'}</span>
-                <span>{expiry || 'MM/YY'}</span>
+                <div className='cardname'>
+                <p className='info-text'>CARDHOLDER NAME</p>
+                <span className='card-info'>{holder || 'Firstname Lastname'}</span>
+                </div>
+                <div className='cardnumbers'>
+                <p className='info-text'>VALID THRU</p>
+                <span className='card-info'>{expiry || 'MM/YY'}</span>
+                </div>
+                
             </div>
         </div>
     );

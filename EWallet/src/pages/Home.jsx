@@ -16,16 +16,17 @@ const otherCards = items.filter ((c) => c.id !== activeCardId)
 console.log('items:', items);
 console.log('otherCards:', otherCards);
     return(
-        <div>
+        <div className="home-page">
             <Header title ="E-Wallet"/>
-            {activeCard && <Card {...activeCard} label="Active card" />}
+            <h2>Active card: </h2>
+            {activeCard && <Card {...activeCard}  />}
 
         <CardStack
         cards = {otherCards}
         onSelect ={(id) => dispatch(cardSetActive(id))}
         />
 
-        <button onClick={() => navigate('/addcard')}> 
+        <button className ="add-button" onClick={() => navigate('/addcard')}> 
             Add a new card
         </button>
         </div>
