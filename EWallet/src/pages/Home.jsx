@@ -29,6 +29,7 @@ console.log('otherCards:', otherCards);
         <button className ="add-button" onClick={() => navigate('/addcard')}> 
             Add a new card
         </button>
+        <p>If you want to remove a card: Contact your bank</p>
         </div>
     )
 }
