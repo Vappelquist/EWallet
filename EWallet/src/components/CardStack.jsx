@@ -1,12 +1,12 @@
 import Card from './Card';
 
 function CardStack({ cards = [], onSelect}){
-    console.log('cards:', cards);
+    console.log("cards:", cards);
     return(
 
 
         
-        <div className='card-stack'>
+        <div className="card-stack">
             {cards.map((card) => (
                 <div key ={card.id} className="card-wrapper" onClick={() => onSelect(card.id)}>
                     <Card {...card}/>

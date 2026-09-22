@@ -24,7 +24,7 @@ function AddCard() {
   };
 
   return(
-    <div className='add-card-menu'>
+    <div className="add-card-menu">
         <Header title="Add a new bank card"/>
     <Card {...formData}  placeholder />            
     <CardForm
